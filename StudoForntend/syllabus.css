@@ -1,0 +1,232 @@
+:root {
+            --primary-color: #4b89b4; 
+            --secondary-color: #e57373; 
+            --background-color: #f0f2f5;
+            --card-background: #ffffff;
+            --text-color: #333;
+            --light-text: #666;
+            --border-color: #e0e0e0;
+        }
+
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        
+        .header {
+            background-color: var(--card-background);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 25px;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            padding: 5px 0;
+            transition: color 0.3s;
+        }
+        
+        .nav-menu a:hover, .nav-menu .active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        
+        .auth-links a {
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 6px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .auth-links #show-login-modal {
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            margin-right: 10px;
+        }
+        
+        .auth-links #show-register-modal {
+            background-color: var(--primary-color);
+            color: white;
+            border: 2px solid var(--primary-color);
+        }
+        
+        .auth-links #show-login-modal:hover {
+            background-color: #e6f0f7;
+        }
+        
+        .auth-links #show-register-modal:hover {
+            background-color: #3b749f;
+        }
+        
+        
+        .section {
+            background-color: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 15px;
+            margin-top: 0;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2.syllabus-title {
+            color: var(--secondary-color);
+        }
+
+        
+        .level-container {
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .level-header {
+            padding: 18px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+            position: relative;
+        }
+        
+        
+        .level-1 > .level-header {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .level-1 > .level-header:hover { background-color: #3b749f; }
+        
+        
+        .level-2 { margin-left: 20px; border-color: var(--secondary-color); }
+        .level-2 > .level-header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding-left: 50px; 
+        }
+        .level-2 > .level-header:hover { background-color: #d35454; }
+        
+        
+        .level-3 { margin-left: 40px; border-color: #a1c5e3; }
+        .level-3 > .level-header {
+            background-color: #a1c5e3;
+            color: var(--text-color);
+            padding-left: 70px; 
+        }
+        .level-3 > .level-header:hover { background-color: #8bb3d4; }
+        
+        
+        .level-4 { margin-left: 60px; border-left: 4px solid var(--primary-color); border-color: #f0f0f0; }
+        .level-4 > .level-header {
+            background-color: #f7f7f7;
+            color: var(--text-color);
+            padding-left: 90px; 
+        }
+        .level-4 > .level-header:hover { background-color: #ebebeb; }
+        
+        
+        .level-5 {
+            padding: 10px 25px 10px 120px;
+            border-bottom: 1px dashed var(--border-color);
+            font-size: 0.95rem;
+            color: var(--light-text);
+            cursor: pointer;
+        }
+        .level-5:hover { background-color: #f0f0f0; }
+        .level-5:last-child { border-bottom: none; }
+
+        .icon-symbol {
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .chevron-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .level-header.active .chevron-icon {
+            transform: rotate(180deg);
+        }
+
+        .level-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            background-color: #fcfcfc;
+        }
+        
+        
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 5%;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                padding: 10px 5%;
+            }
+            .nav-menu {
+                margin: 10px 0;
+                justify-content: center;
+                gap: 15px;
+            }
+            .auth-links {
+                margin-top: 10px;
+            }
+        }
